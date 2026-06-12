@@ -1094,6 +1094,34 @@
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') { closeLightbox(); closeGallery(); }
   });
+
+  // お問い合わせフォーム送信時のメール作成起動処理
+  const contactForm = document.getElementById('hps-contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const tel = document.getElementById('contact-tel').value || '未入力';
+      const date = document.getElementById('contact-date').value || '未入力';
+      const planSelect = document.getElementById('contact-plan');
+      const plan = planSelect.options[planSelect.selectedIndex].text || '未選択';
+      const message = document.getElementById('contact-message').value || '未入力';
+
+      const subject = encodeURIComponent("【HoneyPartyStudio】お問い合わせ");
+      const body = encodeURIComponent(
+        `お名前: ${name}\n` +
+        `メールアドレス: ${email}\n` +
+        `電話番号: ${tel}\n` +
+        `ご希望日程: ${date}\n` +
+        `ご希望プラン: ${plan}\n\n` +
+        `【ご相談内容・ご要望】\n${message}`
+      );
+
+      window.location.href = `mailto:honeypartystudio@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
 </script>
 
 <!-- ============ SERVICE ============ -->
@@ -1214,30 +1242,30 @@
       <h2 class="section-title">お問い合わせ<br><em>・無料相談</em></h2>
       <p class="section-lead">まずはお気軽にご相談ください。お子さまの記念日に合わせて、最高のプランをご提案します。</p>
     </div>
-    <div class="contact-form">
+    <form class="contact-form" id="hps-contact-form">
       <div class="form-row">
         <div class="form-group">
           <label>お名前 <span>必須</span></label>
-          <input type="text" placeholder="山田 花子" />
+          <input type="text" id="contact-name" placeholder="山田 花子" required />
         </div>
         <div class="form-group">
           <label>メールアドレス <span>必須</span></label>
-          <input type="email" placeholder="example@email.com" />
+          <input type="email" id="contact-email" placeholder="example@email.com" required />
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label>電話番号</label>
-          <input type="tel" placeholder="090-0000-0000" />
+          <input type="tel" id="contact-tel" placeholder="090-0000-0000" />
         </div>
         <div class="form-group">
           <label>ご希望日程（目安）</label>
-          <input type="date" />
+          <input type="date" id="contact-date" />
         </div>
       </div>
       <div class="form-group">
         <label>ご希望プラン</label>
-        <select>
+        <select id="contact-plan">
           <option value="">-- お選びください --</option>
           <option>Light プラン（¥30,000〜）</option>
           <option>Standard プラン（¥55,000〜）</option>
@@ -1247,15 +1275,11 @@
       </div>
       <div class="form-group">
         <label>ご相談内容・ご要望</label>
-        <textarea placeholder="テーマのご希望、お子さまの年齢、会場の広さなど、なんでもお気軽にご記入ください。"></textarea>
+        <textarea id="contact-message" placeholder="テーマのご希望、お子さまの年齢、会場の広さなど、なんでもお気軽にご記入ください。"></textarea>
       </div>
       <button class="form-submit" type="submit">✉ 送信する</button>
-    </div>
+    </form>
     <div class="contact-alt">
-      <p style="margin-bottom: 8px;">メールでのお問い合わせはこちら ✉</p>
-      <p style="margin-bottom: 24px; font-size: 1.05rem; font-weight: 700;">
-        <a href="mailto:honeypartystudio@gmail.com" style="color: var(--pink-dark); text-decoration: none; border-bottom: 1.5px solid var(--pink-dark); transition: opacity 0.2s;">honeypartystudio@gmail.com</a>
-      </p>
       <p style="margin-bottom: 16px;">SNSのDMからもお気軽にどうぞ 🌸</p>
       <div class="sns-links">
         <a href="#" class="sns-link sns-instagram">
