@@ -840,6 +840,87 @@
       vertical-align: middle;
     }
 
+    /* ===================== STORY ===================== */
+    .story {
+      background: #fff;
+    }
+    .story-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .story-img-wrap img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(199,81,128,0.15);
+      object-fit: cover;
+      height: 450px;
+    }
+    .story-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+    .story-profile {
+      font-size: 0.9rem;
+      color: var(--pink-dark);
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+    .story-desc {
+      font-size: 0.92rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+
+    /* ===================== FAQ ===================== */
+    .faq {
+      background: linear-gradient(160deg, #fff 0%, var(--pink-light) 100%);
+    }
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 8px 24px rgba(199,81,128,0.06);
+    }
+    .faq-question {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-question::before {
+      content: 'Q';
+      color: var(--pink-deep);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+    .faq-answer {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      padding-left: 28px;
+    }
+
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 900px) {
       nav { padding: 14px 24px; }
@@ -860,6 +941,8 @@
       .contact-form { padding: 36px 24px; }
       .form-row { grid-template-columns: 1fr; }
       .hero-content { margin-left: 5%; }
+      .story-inner { grid-template-columns: 1fr; gap: 32px; }
+      .story-img-wrap img { height: 300px; }
     }
   </style>
 </head>
@@ -870,11 +953,13 @@
   <a class="nav-logo" href="#">Honey<span>Party</span>Studio</a>
   <ul class="nav-links">
     <li><a href="#concept">コンセプト</a></li>
+    <li><a href="#story">ストーリー</a></li>
     <li><a href="#gallery">ギャラリー</a></li>
     <li><a href="#service">サービス</a></li>
     <li><a href="#price">料金</a></li>
-    <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
   </ul>
+  <a class="nav-cta" href="#contact">無料相談する</a>
 </nav>
 
 <!-- ============ HERO ============ -->
@@ -883,8 +968,9 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">✦ Home Party Decoration ✦</div>
+    <div style="display: inline-block; background: rgba(212,169,106,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; backdrop-filter: blur(4px);">📍 出張対応エリア：神奈川近郊・愛知近郊</div>
     <h1>HoneyPartyStudio</h1>
-    <p class="hero-subtitle">忙しいママでも、子どもの<br>最高のお誕生日会を。</p>
+    <p class="hero-subtitle">忙しいパパ・ママでも、子どもの<br>最高のお誕生日会を。</p>
     <p class="hero-desc">
       インスタ映え抜群のホームパーティデコレーションを<br>
       プロがまるごとプロデュース。<br>
@@ -902,19 +988,19 @@
 <section class="concept" id="concept">
   <div class="concept-inner">
     <div class="concept-img-wrap">
-      <img src="images/mom_hug.jpg" alt="ママと子どもの笑顔" />
+      <img src="images/mom_hug.jpg" alt="ご家族の笑顔" />
       <div class="concept-img-badge">子どもの笑顔が<br>一番のごほうび</div>
     </div>
     <div class="concept-text">
       <p class="section-label">✦ Our Concept</p>
       <h2 class="section-title">
-        忙しいママにも、<br><em>最高の思い出</em>を。
+        忙しいご家族にも、<br><em>最高の思い出</em>を。
       </h2>
       <p class="section-lead">
         「手作りしたいけど時間がない」「センスよく飾りたいけどわからない」<br>
-        そんなママたちのために、HoneyPartyStudioが誕生しました。<br><br>
+        そんなパパ・ママ、ご家族のためにHoneyPartyStudioが誕生しました。<br><br>
         プロのデコレーターがあなたのお家をまるごとおしゃれに変身させます。
-        子どもの大切な記念日を、インスタ映えする最高の空間で祝いましょう。
+        子どもの大切な記念日を、映える最高の空間で祝いましょう。
       </p>
       <div class="concept-points">
         <div class="concept-point">
@@ -927,17 +1013,38 @@
         <div class="concept-point">
           <div class="concept-point-icon">📸</div>
           <div class="concept-point-text">
-            <h4>インスタ映え抜群</h4>
-            <p>バルーンアーチ・フォトブース・スイーツテーブルなど、SNS映えを意識したプロのコーディネートで思い出を美しく残せます。</p>
+            <h4>フォトジェニックな空間</h4>
+            <p>バルーンアーチ・フォトブース・スイーツテーブルなど、映えを意識したプロのコーディネートで思い出を美しく残せます。</p>
           </div>
         </div>
         <div class="concept-point">
           <div class="concept-point-icon">🏠</div>
           <div class="concept-point-text">
             <h4>自宅に来てセットアップ</h4>
-            <p>出張設置サービスで、ママは何もしなくてOK！パーティ当日はゲストをお迎えするだけ。後片付けもお任せください。</p>
+            <p>出張設置サービスで、パパ・ママは当日見守るだけでOK！パーティ当日はゲストをお迎えするだけ。後片付けもお任せください。</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-img-wrap">
+      <img src="images/pink2.jpg" alt="オーナー 岸千明" />
+    </div>
+    <div class="story-text">
+      <p class="section-label">✦ Our Story</p>
+      <h3>「生まれてきてくれて、ありがとう」が伝わる瞬間を。</h3>
+      <p class="story-profile">Owner & Decorator / 岸 千明 (Chiaki Kishi)</p>
+      <div class="story-desc">
+        <p>私自身、かつて海外に滞在していた頃、現地のご家族が大切な人の誕生日を驚くほど盛大に、愛情たっぷりに祝うパーティ文化に深い感銘を受けました。そこにあったのは、単にお部屋を飾るだけでなく、「あなたは私たちにとって、かけがえのない大切な存在だよ」という強いメッセージを伝える空間でした。</p>
+        <br>
+        <p>日本に戻り、日々の仕事や家事に追われながら一生懸命に子育てをするパパ・ママたちの姿を見て、「あの温かいパーティ空間を、もっと手軽に日本のおうちにも届けたい」と思うようになりました。「準備する時間がない」「センスよく飾れない」と悩む必要はありません。バルーンの設置から、お祝いのあとの片付けまで、私たちが心を込めてすべてお手伝いします。</p>
+        <br>
+        <p>忙しい日常のなかに、ほんの少しの特別な魔法を。ご家族全員が笑顔で「おめでとう」を言い合える、愛おしい瞬間に集中できるよう、心を込めてプロデュースいたします。</p>
       </div>
     </div>
   </div>
@@ -1021,6 +1128,8 @@
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightbox-img" src="" alt="" />
 </div>
+
+
 
 <script>
   const THEMES = {
@@ -1172,6 +1281,8 @@
   </div>
 </section>
 
+
+
 <!-- ============ PRICE ============ -->
 <section class="price" id="price">
   <div class="price-inner">
@@ -1179,14 +1290,17 @@
       <p class="section-label">✦ Pricing</p>
       <h2 class="section-title">料金<em>プラン</em></h2>
       <p class="section-lead">すべてのプランに出張設置・撤去が含まれます。ご予算に合わせてカスタマイズも可能です。</p>
+      <div style="display: inline-block; background: rgba(232,116,158,0.12); border: 1.5px solid var(--pink-deep); color: var(--pink-dark); font-size: 0.82rem; font-weight: 700; padding: 8px 20px; border-radius: 50px; margin-bottom: 24px;">✨ 今だけ！【Lightモニタープラン】特別価格 ¥20,000 (通常 ¥30,000) 実施中！</div>
       <p class="price-note">※ 料金は目安です。詳細はお問い合わせください。</p>
     </div>
     <div class="price-cards">
       <!-- Light -->
-      <div class="price-card">
-        <p class="price-plan">Light</p>
-        <div class="price-amount"><sup>¥</sup>30,000<sub>〜</sub></div>
-        <p class="price-from">（税込）</p>
+      <div class="price-card" style="border: 2px solid var(--pink); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 12px; right: -32px; background: var(--pink-deep); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 4px 32px; transform: rotate(45deg); letter-spacing: 0.05em;">MONITOR</div>
+        <p class="price-plan">Light (モニター特別価格)</p>
+        <div class="price-amount" style="color: var(--pink-deep);"><sup>¥</sup>20,000<sub>〜</sub></div>
+        <p class="price-from" style="text-decoration: line-through; color: var(--text-light); margin-bottom: 4px;">通常 ¥30,000（税込）</p>
+        <p class="price-from" style="color: var(--pink-dark); font-weight: bold;">モニター価格（税込）</p>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>バルーンガーランド（2〜3m）</li>
@@ -1194,7 +1308,7 @@
           <li>出張設置・撤去込み</li>
           <li>所要時間：約1〜1.5時間</li>
         </ul>
-        <a href="#contact" class="btn-price btn-price-outline">相談する</a>
+        <a href="#contact" class="btn-price btn-price-fill" style="background: var(--pink-deep);">モニターで相談する</a>
       </div>
       <!-- Standard -->
       <div class="price-card featured">
@@ -1269,7 +1383,7 @@
         <label>ご希望プラン</label>
         <select id="contact-plan">
           <option value="">-- お選びください --</option>
-          <option>Light プラン（¥30,000〜）</option>
+          <option>Light モニタープラン（特別価格 ¥20,000）</option>
           <option>Standard プラン（¥55,000〜）</option>
           <option>Premium プラン（¥90,000〜）</option>
           <option>まだ決まっていない / 相談したい</option>
@@ -1296,6 +1410,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- ============ FOOTER ============ -->
 <footer>
