@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HoneyPartyStudio｜インスタ映えホームパーティデコレーション</title>
+  <title>HoneyPartyStudio｜横浜の誕生日飾り付け・出張パーティ装飾</title>
+  <meta name="description" content="「あなたは大切な存在」が伝わる誕生日装飾。横浜近郊へ出張し、設営から撤去までおまかせ（横浜市内は出張費込み）。装飾キットは全国発送。ご相談はInstagramのDMへ。" />
+  <!-- OGP（インスタ・LINE等でシェアされたときの表示） -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HoneyPartyStudio" />
+  <meta property="og:title" content="HoneyPartyStudio｜横浜の誕生日飾り付け・出張パーティ装飾" />
+  <meta property="og:description" content="「あなたは大切な存在」が伝わる誕生日装飾。設営から撤去までおまかせ。横浜市内は出張費込み／装飾キットは全国発送。" />
+  <meta property="og:url" content="https://thiakibu-hps.github.io/honeypartystudio/" />
+  <meta property="og:image" content="https://thiakibu-hps.github.io/honeypartystudio/images/mermaid1.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -922,6 +932,25 @@
     }
 
     /* ===================== RESPONSIVE ===================== */
+    /* ===================== 改行コントロール(スマホ対応) ===================== */
+    .br-pc { display: inline; }  /* PCのみ改行 */
+    .br-sp { display: none; }    /* スマホのみ改行 */
+    .hero-area-badge {
+      display: inline-block;
+      background: rgba(212,169,106,0.85);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(4px);
+      line-height: 1.7;
+      max-width: 100%;
+    }
+    .section-title { word-break: auto-phrase; }
+
     @media (max-width: 900px) {
       nav { padding: 14px 24px; }
       .nav-links { display: none; }
@@ -943,6 +972,11 @@
       .hero-content { margin-left: 5%; }
       .story-inner { grid-template-columns: 1fr; gap: 32px; }
       .story-img-wrap img { height: 300px; }
+      .br-pc { display: none; }
+      .br-sp { display: inline; }
+      .hero-area-badge { font-size: 0.66rem; letter-spacing: 0.04em; border-radius: 18px; padding: 6px 14px; }
+      .hero-desc { font-size: 0.9rem; }
+      .price-footer-note { text-align: left; font-size: 0.78rem; }
     }
   </style>
 </head>
@@ -968,11 +1002,11 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">✦ Home Party Decoration ✦</div>
-    <div style="display: inline-block; background: rgba(212,169,106,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; backdrop-filter: blur(4px);">📍 出張エリア：横浜近郊（横浜市内は出張費込み）｜装飾キットは全国発送</div>
+    <div class="hero-area-badge">📍 出張エリア：横浜近郊（横浜市内は出張費込み）<br class="br-sp">｜装飾キットは全国発送</div>
     <h1>HoneyPartyStudio</h1>
-    <p class="hero-subtitle">忙しいパパ・ママでも、子どもの<br>最高のお誕生日会を。</p>
+    <p class="hero-subtitle">忙しいパパ・ママでも、<br>子どもの最高のお誕生日会を。</p>
     <p class="hero-desc">
-      『あなたは大切な存在』が伝わる誕生日装飾を、<br>
+      「あなたは大切な存在」が伝わる誕生日装飾を、<br class="br-pc">
       デザインから設置・撤去までまるごとお任せ。<br>
       特別な日を、一生の宝物に。
     </p>
@@ -988,19 +1022,19 @@
 <section class="concept" id="concept">
   <div class="concept-inner">
     <div class="concept-img-wrap">
-      <img src="images/mom_hug.jpg" alt="ご家族の笑顔" />
-      <div class="concept-img-badge">子どもの笑顔が<br>一番のごほうび</div>
+      <img loading="lazy" decoding="async" src="images/mom_hug.jpg" alt="ご家族の笑顔" />
+      <div class="concept-img-badge">ドアを開けた瞬間の<br>「わあ！」のために</div>
     </div>
     <div class="concept-text">
       <p class="section-label">✦ Our Concept</p>
       <h2 class="section-title">
-        忙しいご家族にも、<br><em>最高の思い出</em>を。
+        がんばるパパ・ママの代わりに、<br><em>写真に残る特別な一日</em>を。
       </h2>
       <p class="section-lead">
-        「手作りしたいけど時間がない」「センスよく飾りたいけどわからない」<br>
+        「手作りしたいけど時間がない」「センスよく飾りたいけどわからない」<br class="br-pc">
         そんなパパ・ママ、ご家族のためにHoneyPartyStudioが誕生しました。<br><br>
         プロのデコレーターがあなたのお家をまるごとおしゃれに変身させます。
-        子どもの大切な記念日を、映える最高の空間で祝いましょう。
+        写真に残る特別な一日を、大切な空間でおつくりします。
       </p>
       <div class="concept-points">
         <div class="concept-point">
@@ -1033,7 +1067,7 @@
 <section class="story" id="story">
   <div class="story-inner">
     <div class="story-img-wrap">
-      <img src="images/pink2.jpg" alt="オーナー 岸千明" />
+      <img loading="lazy" decoding="async" src="images/pink2.jpg" alt="オーナー 岸千明" />
     </div>
     <div class="story-text">
       <p class="section-label">✦ Our Story</p>
@@ -1066,7 +1100,7 @@
 
       <!-- マーメイドパーティ -->
       <div class="theme-card" onclick="openGallery('mermaid')">
-        <img src="images/mermaid1.jpg" alt="マーメイドパーティ" />
+        <img loading="lazy" decoding="async" src="images/mermaid1.jpg" alt="マーメイドパーティ" />
         <div class="theme-card-overlay">
           <div class="theme-card-emoji">🧜</div>
           <div class="theme-card-name">マーメイドパーティ</div>
@@ -1076,7 +1110,7 @@
 
       <!-- ピンクガーリーパーティ -->
       <div class="theme-card" onclick="openGallery('pink')">
-        <img src="images/pink2.jpg" alt="ピンクガーリーパーティ" />
+        <img loading="lazy" decoding="async" src="images/pink2.jpg" alt="ピンクガーリーパーティ" />
         <div class="theme-card-overlay">
           <div class="theme-card-emoji">🎀</div>
           <div class="theme-card-name">ピンクガーリーパーティ</div>
@@ -1086,7 +1120,7 @@
 
       <!-- ひまわりパーティ -->
       <div class="theme-card" onclick="openGallery('himawari')">
-        <img src="images/himawari1.jpg" alt="ひまわりパーティ" />
+        <img loading="lazy" decoding="async" src="images/himawari1.jpg" alt="ひまわりパーティ" />
         <div class="theme-card-overlay">
           <div class="theme-card-emoji">🌻</div>
           <div class="theme-card-name">ひまわりパーティ</div>
@@ -1096,7 +1130,7 @@
 
       <!-- アイスパーティ（4番目：中央左） -->
       <div class="theme-card" onclick="openGallery('ice')">
-        <img src="images/ice2.jpg" alt="アイスパーティ" />
+        <img loading="lazy" decoding="async" src="images/ice2.jpg" alt="アイスパーティ" />
         <div class="theme-card-overlay">
           <div class="theme-card-emoji">🍦</div>
           <div class="theme-card-name">アイスパーティ</div>
@@ -1106,7 +1140,7 @@
 
       <!-- こどもコンサートイベント（5番目：中央右） -->
       <div class="theme-card" onclick="openGallery('event')">
-        <img src="images/event1.jpg" alt="こどもコンサートイベント" />
+        <img loading="lazy" decoding="async" src="images/event1.jpg" alt="こどもコンサートイベント" />
         <div class="theme-card-overlay">
           <div class="theme-card-emoji">🎪</div>
           <div class="theme-card-name">こどもコンサートイベント</div>
@@ -1221,33 +1255,33 @@
     <div class="service-cards">
       <div class="service-card">
         <div class="service-card-img">
-          <img src="images/service1.jpg" alt="バルーンデコレーション" />
+          <img loading="lazy" decoding="async" src="images/service1.jpg" alt="バルーンデコレーション" />
         </div>
         <div class="service-card-body">
           <div class="service-card-num">01</div>
-          <h3>バルーン<br>デコレーション</h3>
+          <h3>バルーン<br class="br-pc">デコレーション</h3>
           <p>バルーンアーチ・バルーンガーランド・天井バルーンなど、ボリューム感のある華やかな演出で会場を一瞬で変身させます。</p>
           <span class="service-card-tag">🎈 バルーン</span>
         </div>
       </div>
       <div class="service-card">
         <div class="service-card-img">
-          <img src="images/service2.jpg" alt="スイーツテーブル" />
+          <img loading="lazy" decoding="async" src="images/service2.jpg" alt="スイーツテーブル" />
         </div>
         <div class="service-card-body">
           <div class="service-card-num">02</div>
-          <h3>スイーツ<br>テーブルコーディネート</h3>
+          <h3>スイーツ<br class="br-pc">テーブルコーディネート</h3>
           <p>テーマに合わせたケーキスタンド・バナー・フラワーなどで、フォトジェニックなスイーツテーブルをスタイリング。</p>
           <span class="service-card-tag">🍰 スイーツ</span>
         </div>
       </div>
       <div class="service-card">
         <div class="service-card-img">
-          <img src="images/mermaid1.jpg" alt="フォトブース" />
+          <img loading="lazy" decoding="async" src="images/mermaid1.jpg" alt="フォトブース" />
         </div>
         <div class="service-card-body">
           <div class="service-card-num">03</div>
-          <h3>フォトブース<br>プロデュース</h3>
+          <h3>フォトブース<br class="br-pc">プロデュース</h3>
           <p>バックドロップ・フォトプロップス・電飾ナンバーなど、映える写真が撮れるフォトブースを丸ごとプロデュース。</p>
           <span class="service-card-tag">📸 フォトブース</span>
         </div>
@@ -1408,8 +1442,8 @@
   <div class="contact-inner">
     <div class="center">
       <p class="section-label">✦ Contact</p>
-      <h2 class="section-title">お問い合わせ<br><em>・無料相談</em></h2>
-      <p class="section-lead">ご相談・お見積りは、InstagramのDMからどうぞ。<br>『日にち・場所・お子さまの年齢と好きなもの』を送っていただけるとスムーズです。<br>24時間以内にお返事します🍯</p>
+      <h2 class="section-title">お問い合わせ<em>・無料相談</em></h2>
+      <p class="section-lead">ご相談・お見積りは、InstagramのDMからどうぞ。<br class="br-pc">『日にち・場所・お子さまの年齢と好きなもの』を送っていただけるとスムーズです。<br>24時間以内にお返事します🍯</p>
     </div>
     <div style="margin-top:56px;max-width:360px;margin-left:auto;margin-right:auto;">
       <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-price btn-price-fill">📩 InstagramのDMで相談する</a>
@@ -1434,7 +1468,7 @@
   <div class="footer-logo">Honey<span>Party</span>Studio</div>
   <p class="footer-tagline">
     忙しいパパ・ママでも、子どもの最高のお誕生日会を。<br>
-    インスタ映え抜群のホームパーティデコレーションをプロデュース。
+    「あなたは大切な存在」が伝わる誕生日装飾を、横浜からお届けします。
   </p>
   <p style="margin-bottom: 24px; font-size: 0.85rem;">
     Email: <a href="mailto:honeypartystudio@gmail.com" style="color: var(--pink); text-decoration: none; border-bottom: 1px dashed var(--pink);">honeypartystudio@gmail.com</a>
