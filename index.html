@@ -959,7 +959,7 @@
     <li><a href="#price">料金</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
   </ul>
-  <a class="nav-cta" href="#contact">無料相談する</a>
+  <a class="nav-cta" href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener">📩 DMで無料相談</a>
 </nav>
 
 <!-- ============ HERO ============ -->
@@ -968,16 +968,16 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">✦ Home Party Decoration ✦</div>
-    <div style="display: inline-block; background: rgba(212,169,106,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; backdrop-filter: blur(4px);">📍 出張対応エリア：神奈川近郊・愛知近郊</div>
+    <div style="display: inline-block; background: rgba(212,169,106,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; backdrop-filter: blur(4px);">📍 出張エリア：横浜近郊（横浜市内は出張費込み）｜装飾キットは全国発送</div>
     <h1>HoneyPartyStudio</h1>
     <p class="hero-subtitle">忙しいパパ・ママでも、子どもの<br>最高のお誕生日会を。</p>
     <p class="hero-desc">
-      インスタ映え抜群のホームパーティデコレーションを<br>
-      プロがまるごとプロデュース。<br>
+      『あなたは大切な存在』が伝わる誕生日装飾を、<br>
+      デザインから設置・撤去までまるごとお任せ。<br>
       特別な日を、一生の宝物に。
     </p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">✉ 無料相談はこちら</a>
+      <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-primary">📩 DMで無料相談</a>
       <a href="#gallery" class="btn-outline">作品を見る ▸</a>
     </div>
   </div>
@@ -1158,7 +1158,7 @@
       photos: [
         'images/himawari1.jpg','images/himawari2.jpg',
         'images/himawari3.jpg','images/himawari4.jpg',
-        'images/himawari5.jpg','images/himawari6.jpg'
+        'images/himawari6.jpg'
       ]
     },
     ice: {
@@ -1208,35 +1208,6 @@
     if (e.key === 'Escape') { closeLightbox(); closeGallery(); }
   });
 
-  // お問い合わせフォーム送信時のメール作成起動処理
-  document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('hps-contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('contact-name').value;
-        const email = document.getElementById('contact-email').value;
-        const tel = document.getElementById('contact-tel').value || '未入力';
-        const date = document.getElementById('contact-date').value || '未入力';
-        const planSelect = document.getElementById('contact-plan');
-        const plan = planSelect.options[planSelect.selectedIndex].text || '未選択';
-        const message = document.getElementById('contact-message').value || '未入力';
-
-        const subject = encodeURIComponent("【HoneyPartyStudio】お問い合わせ");
-        const body = encodeURIComponent(
-          `お名前: ${name}\n` +
-          `メールアドレス: ${email}\n` +
-          `電話番号: ${tel}\n` +
-          `ご希望日程: ${date}\n` +
-          `ご希望プラン: ${plan}\n\n` +
-          `【ご相談内容・ご要望】\n${message}`
-        );
-
-        window.location.href = `mailto:honeypartystudio@gmail.com?subject=${subject}&body=${body}`;
-      });
-    }
-  });
 </script>
 
 <!-- ============ SERVICE ============ -->
@@ -1294,7 +1265,7 @@
       <p class="section-label">✦ Pricing</p>
       <h2 class="section-title">料金<em>プラン</em></h2>
       <p class="section-lead">すべてのプランに出張設置・撤去が含まれます。ご予算に合わせてカスタマイズも可能です。</p>
-      <div style="display: inline-block; background: rgba(232,116,158,0.12); border: 1.5px solid var(--pink-deep); color: var(--pink-dark); font-size: 0.82rem; font-weight: 700; padding: 8px 20px; border-radius: 50px; margin-bottom: 24px;">✨ 今だけ！【Lightモニタープラン】特別価格 ¥19,900 (通常 ¥30,000) 実施中！</div>
+      <div style="display: inline-block; background: rgba(232,116,158,0.12); border: 1.5px solid var(--pink-deep); color: var(--pink-dark); font-size: 0.82rem; font-weight: 700; padding: 8px 20px; border-radius: 50px; margin-bottom: 24px;">✨ 先着5件限定！モニター特別価格 ¥16,500（通常¥27,500）実施中　※お写真の掲載（お顔なしOK）にご協力いただける方限定</div>
       <p class="price-note">※ 料金は目安です。詳細はお問い合わせください。</p>
     </div>
     <div class="price-cards">
@@ -1302,9 +1273,9 @@
       <div class="price-card" style="border: 2px solid var(--pink); position: relative; overflow: hidden;">
         <div style="position: absolute; top: 12px; right: -32px; background: var(--pink-deep); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 4px 32px; transform: rotate(45deg); letter-spacing: 0.05em;">MONITOR</div>
         <p class="price-plan">Light (モニター特別価格)</p>
-        <div class="price-amount" style="color: var(--pink-deep);"><sup>¥</sup>19,900<sub>〜</sub></div>
-        <p class="price-from" style="text-decoration: line-through; color: var(--text-light); margin-bottom: 4px;">通常 ¥30,000（税込）</p>
-        <p class="price-from" style="color: var(--pink-dark); font-weight: bold;">モニター価格（税込）</p>
+        <div class="price-amount" style="color: var(--pink-deep);"><sup>¥</sup>16,500</div>
+        <p class="price-from" style="text-decoration: line-through; color: var(--text-light); margin-bottom: 4px;">通常 ¥27,500（税込）</p>
+        <p class="price-from" style="color: var(--pink-dark); font-weight: bold;">モニター特別価格（税込）</p>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>バルーンガーランド（2〜3m）</li>
@@ -1312,45 +1283,123 @@
           <li>出張設置・撤去込み</li>
           <li>所要時間：約1〜1.5時間</li>
         </ul>
-        <a href="#contact" class="btn-price btn-price-fill" style="background: var(--pink-deep);">モニターで相談する</a>
+        <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-price btn-price-fill" style="background: var(--pink-deep);">📩 モニターをDMで相談</a>
       </div>
       <!-- Standard -->
       <div class="price-card featured">
         <div class="price-badge">⭐ 人気No.1</div>
         <p class="price-plan">Standard</p>
-        <div class="price-amount"><sup>¥</sup>55,000<sub>〜</sub></div>
+        <div class="price-amount"><sup>¥</sup>44,000</div>
         <p class="price-from">（税込）</p>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li>バルーンアーチ（フルサイズ）</li>
+          <li>バルーンガーランド</li>
           <li>フォトブース一式</li>
           <li>スイーツテーブルスタイリング</li>
           <li>バナー・ガーランド</li>
           <li>出張設置・撤去込み</li>
         </ul>
-        <a href="#contact" class="btn-price btn-price-fill">相談する</a>
+        <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-price btn-price-fill">📩 DMで無料相談</a>
       </div>
       <!-- Premium -->
       <div class="price-card">
         <p class="price-plan">Premium</p>
-        <div class="price-amount"><sup>¥</sup>90,000<sub>〜</sub></div>
-        <p class="price-from">（税込）</p>
+        <div class="price-amount"><sup>¥</sup>77,000<sub>〜</sub></div>
+        <p class="price-from">（税込・要お見積り）</p>
         <div class="price-divider"></div>
         <ul class="price-features">
           <li>完全オーダーメイドコーディネート</li>
-          <li>バルーンアーチ＋フォトブース</li>
-          <li>フルスイーツテーブル演出</li>
-          <li>お花・フラワーアレンジメント</li>
-          <li>電飾ナンバー・プロップス一式</li>
+          <li>フォトブース＋フルスイーツテーブル演出</li>
+          <li>お花・電飾ナンバー・プロップス一式</li>
           <li>出張設置・撤去込み</li>
         </ul>
-        <a href="#contact" class="btn-price btn-price-outline">相談する</a>
+        <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-price btn-price-outline">📩 DMで無料相談</a>
       </div>
     </div>
     <p class="price-footer-note">
       ✦ すべてのプランでテーマ・カラーのカスタマイズが可能です<br>
-      ✦ 遠方への出張はご相談ください（交通費別途）
+      ✦ 横浜市内は出張費込み／川崎・鎌倉・横須賀・藤沢など近隣市は+¥1,100／それ以遠はご相談ください（+¥2,200〜）<br>
+      ✦ お支払いは前日までに銀行振込またはPayPayにて
     </p>
+  </div>
+</section>
+
+<!-- ============ FLOW ============ -->
+<section id="flow">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="center">
+      <p class="section-label">✦ Flow</p>
+      <h2 class="section-title">ご依頼の<em>流れ</em></h2>
+    </div>
+    <div class="concept-points" style="max-width:640px;margin:48px auto 0;">
+      <div class="concept-point">
+        <div class="concept-point-icon">1</div>
+        <div class="concept-point-text">
+          <h4>DMでご相談</h4>
+          <p>日にち・場所・お子さまの好きなものを送るだけ</p>
+        </div>
+      </div>
+      <div class="concept-point">
+        <div class="concept-point-icon">2</div>
+        <div class="concept-point-text">
+          <h4>ヒアリング＆ご提案</h4>
+          <p>テーマとお見積りをご案内</p>
+        </div>
+      </div>
+      <div class="concept-point">
+        <div class="concept-point-icon">3</div>
+        <div class="concept-point-text">
+          <h4>ご予約確定</h4>
+          <p>前日までに銀行振込またはPayPayでお支払い</p>
+        </div>
+      </div>
+      <div class="concept-point">
+        <div class="concept-point-icon">4</div>
+        <div class="concept-point-text">
+          <h4>当日おまかせ</h4>
+          <p>設置は約1〜2時間。パパ・ママは見守るだけ</p>
+        </div>
+      </div>
+      <div class="concept-point">
+        <div class="concept-point-icon">5</div>
+        <div class="concept-point-text">
+          <h4>パーティ後に撤去</h4>
+          <p>後片付けまでお任せください</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="center">
+      <p class="section-label">✦ FAQ</p>
+      <h2 class="section-title">よくある<em>質問</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">賃貸でも大丈夫ですか？</div>
+        <div class="faq-answer">A. はい。壁を傷つけないテープ・道具で設置しますのでご安心ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">何日前までに予約すればいいですか？</div>
+        <div class="faq-answer">A. 制作のお時間をいただくため、2週間前までのご予約がおすすめです。直前でもまずはご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">子どもの写真は掲載されますか？</div>
+        <div class="faq-answer">A. ご希望を伺ったうえで、掲載なし・お顔なしなど柔軟に対応します。モニター価格のみ、装飾写真の掲載が条件です。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">テーマやキャラクターの指定はできますか？</div>
+        <div class="faq-answer">A. お子さまの好きな色・世界観に合わせてオリジナルでおつくりします。お気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">キャンセルはできますか？</div>
+        <div class="faq-answer">A. 7日前まで無料、それ以降は50%を頂戴しています。</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1360,55 +1409,18 @@
     <div class="center">
       <p class="section-label">✦ Contact</p>
       <h2 class="section-title">お問い合わせ<br><em>・無料相談</em></h2>
-      <p class="section-lead">まずはお気軽にご相談ください。お子さまの記念日に合わせて、最高のプランをご提案します。</p>
+      <p class="section-lead">ご相談・お見積りは、InstagramのDMからどうぞ。<br>『日にち・場所・お子さまの年齢と好きなもの』を送っていただけるとスムーズです。<br>24時間以内にお返事します🍯</p>
     </div>
-    <form class="contact-form" id="hps-contact-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label>お名前 <span>必須</span></label>
-          <input type="text" id="contact-name" placeholder="山田 花子" required />
-        </div>
-        <div class="form-group">
-          <label>メールアドレス <span>必須</span></label>
-          <input type="email" id="contact-email" placeholder="example@email.com" required />
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>電話番号</label>
-          <input type="tel" id="contact-tel" placeholder="090-0000-0000" />
-        </div>
-        <div class="form-group">
-          <label>ご希望日程（目安）</label>
-          <input type="date" id="contact-date" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label>ご希望プラン</label>
-        <select id="contact-plan">
-          <option value="">-- お選びください --</option>
-          <option>Light モニタープラン（特別価格 ¥19,900）</option>
-          <option>Standard プラン（¥55,000〜）</option>
-          <option>Premium プラン（¥90,000〜）</option>
-          <option>まだ決まっていない / 相談したい</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>ご相談内容・ご要望</label>
-        <textarea id="contact-message" placeholder="テーマのご希望、お子さまの年齢、会場の広さなど、なんでもお気軽にご記入ください。"></textarea>
-      </div>
-      <button class="form-submit" type="submit">✉ 送信する</button>
-    </form>
+    <div style="margin-top:56px;max-width:360px;margin-left:auto;margin-right:auto;">
+      <a href="https://ig.me/m/honeypartystudio" target="_blank" rel="noopener" class="btn-price btn-price-fill">📩 InstagramのDMで相談する</a>
+      <p style="margin-top:20px;font-size:0.82rem;color:var(--text-light);text-align:center;">※Instagramをお使いでない方はメールでも承ります：honeypartystudio@gmail.com</p>
+    </div>
     <div class="contact-alt">
       <p style="margin-bottom: 16px;">SNSのDMからもお気軽にどうぞ 🌸</p>
       <div class="sns-links">
         <a href="https://www.instagram.com/honeypartystudio/" class="sns-link sns-instagram" target="_blank">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           Instagram
-        </a>
-        <a href="#" class="sns-link sns-line">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-          LINE
         </a>
       </div>
     </div>
@@ -1421,7 +1433,7 @@
 <footer>
   <div class="footer-logo">Honey<span>Party</span>Studio</div>
   <p class="footer-tagline">
-    忙しいママでも、子どもの最高のお誕生日会を。<br>
+    忙しいパパ・ママでも、子どもの最高のお誕生日会を。<br>
     インスタ映え抜群のホームパーティデコレーションをプロデュース。
   </p>
   <p style="margin-bottom: 24px; font-size: 0.85rem;">
